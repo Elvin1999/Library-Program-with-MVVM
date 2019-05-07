@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800" AllowsTransparency="True" Background="Transparent"
+         WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
+
+        <Canvas>
+            <Rectangle Fill="LightBlue" RadiusX="120" RadiusY="120" Width="700" Height="600">
+                <Canvas.Left>50</Canvas.Left>
+            </Rectangle>
+            <Border Name="btn" CornerRadius="50" Background="DeepSkyBlue" Width="80" Height="80">
+                <Button Name="Exit" Width="50" Height="50" Background="DeepSkyBlue" Click="Exit_Click" BorderThickness="0"
+                       Content="X" FontSize="30">
+                    <Button.Style>
+                        <Style>
+                            <Setter Property="Control.Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Canvas.Left>600</Canvas.Left>
+                <Canvas.Top>20</Canvas.Top>
+                
+            </Border>
+        </Canvas>
         
     </Grid>
 </Window>
