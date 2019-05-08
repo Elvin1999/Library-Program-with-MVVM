@@ -67,6 +67,7 @@
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\Filial.cs" />
+    <Compile Include="Entities\Genre.cs" />
     <Compile Include="Entities\Worker.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
