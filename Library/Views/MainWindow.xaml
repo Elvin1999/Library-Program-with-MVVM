@@ -11,7 +11,14 @@
     <Grid>
 
         <Canvas>
-            <Rectangle Fill="MidnightBlue" RadiusX="20" RadiusY="20" Width="700" Height="600">
+            <Rectangle RadiusX="20" RadiusY="20" Width="700" Height="600">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#00f260" Offset="0.0" />
+                        <GradientStop Color="#0575e6" Offset="1" />
+                    </LinearGradientBrush>
+
+                </Rectangle.Fill>
                 <Canvas.Left>
                     <System:Double>50</System:Double>
                 </Canvas.Left>
@@ -23,41 +30,64 @@
                 <Canvas.Left>380</Canvas.Left>
                 
             </Ellipse>
-            <StackPanel Orientation="Vertical" Background="MidnightBlue" Width="300" Height="150" Canvas.Left="55" Canvas.Top="20">
+            <StackPanel Orientation="Vertical" Width="300" Height="150" Canvas.Left="55" Canvas.Top="20">
                 <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                    <Border Background="AliceBlue" CornerRadius="50" Width="130" Height="60" 
+                    <Border Background="White" CornerRadius="50" Width="130" Height="60" 
                         Margin="20,0,0,0">
-                        <Button Width="105" Height="35" Background="AliceBlue" BorderThickness="0" BorderBrush="AliceBlue"
-                                Content="Books" FontFamily="Comic Sans MS" FontSize="24"
-                                Foreground="MidnightBlue">
 
+                        <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
+                                Command="{Binding BookSectionCommand}"
+                                Content="Books" FontFamily="Comic Sans MS" FontSize="24"
+                                >
+                            <Button.Foreground>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#00f260" Offset="0.0" />
+                                    <GradientStop Color="#0575e6" Offset="1" />
+                                </LinearGradientBrush>
+                            </Button.Foreground>
                         </Button>
                     </Border>
 
-                    <Border Background="AliceBlue" CornerRadius="50" Width="130" Height="60" 
+                    <Border Background="White" CornerRadius="50" Width="130" Height="60" 
                         Margin="20,0,0,0">
-                        <Button Width="105" Height="35" Background="AliceBlue" BorderThickness="0" BorderBrush="AliceBlue"
+                        <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
                                 Content="Filials" FontFamily="Comic Sans MS" FontSize="24"
-                                Foreground="MidnightBlue">
-
+                                >
+                            <Button.Foreground>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#00f260" Offset="0.0" />
+                                    <GradientStop Color="#0575e6" Offset="1" />
+                                </LinearGradientBrush>
+                            </Button.Foreground>
                         </Button>
                     </Border>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal"  Margin="0,10,0,0">
 
-                    <Border Background="AliceBlue" CornerRadius="50" Width="130" Height="60" 
+                    <Border Background="White" CornerRadius="50" Width="130" Height="60" 
                         Margin="20,0,0,0">
-                        <Button Width="105" Height="35" Background="AliceBlue" BorderThickness="0" BorderBrush="AliceBlue"
+                        <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
                                 Content="Clients" FontFamily="Comic Sans MS" FontSize="24"
-                                Foreground="MidnightBlue">
-
+                               >
+                            <Button.Foreground>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#00f260" Offset="0.0" />
+                                    <GradientStop Color="#0575e6" Offset="1" />
+                                </LinearGradientBrush>
+                            </Button.Foreground>
                         </Button>
                     </Border>
-                    <Border Background="AliceBlue" CornerRadius="50" Width="130" Height="60" 
+                    <Border Background="White" CornerRadius="50" Width="130" Height="60" 
                         Margin="20,0,0,0">
-                        <Button Width="105" Height="35" Background="AliceBlue" BorderThickness="0" BorderBrush="AliceBlue"
+                        <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
                                 Content="Workers" FontFamily="Comic Sans MS" FontSize="24"
-                                Foreground="MidnightBlue">
+                                >
+                            <Button.Foreground>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#00f260" Offset="0.0" />
+                                    <GradientStop Color="#0575e6" Offset="1" />
+                                </LinearGradientBrush>
+                            </Button.Foreground>
 
                         </Button>
                     </Border>
@@ -71,15 +101,36 @@
                 Welcome to our book store
             </TextBlock>
             <StackPanel Background="White" Width="300" Height="350" Canvas.Top="140" Canvas.Left="440">
-                <TextBlock Name="bookStoreTxtb" FontSize="80" FontFamily="Comic Sans MS" Foreground="MidnightBlue" TextAlignment="Left">
- B<TextBlock Foreground="DeepPink">o</TextBlock><TextBlock Foreground="Orange">o</TextBlock>k 
+                <TextBlock Name="bookStoreTxtb" FontSize="80" FontFamily="Comic Sans MS" TextAlignment="Left">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop Color="#00f260" Offset="0.0" />
+                            <GradientStop Color="#0575e6" Offset="1" />
+                        </LinearGradientBrush>
+
+                    </TextBlock.Foreground>
+ Book 
                 </TextBlock>
                 
-                <TextBlock Name="bookStoreTxtb2" FontSize="80" FontFamily="Comic Sans MS" Foreground="MidnightBlue" TextAlignment="Center">
-  St<TextBlock Foreground="DeepPink">o</TextBlock>r<TextBlock Foreground="Orange">e</TextBlock>
+                <TextBlock Name="bookStoreTxtb2" FontSize="80" FontFamily="Comic Sans MS"  TextAlignment="Center">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop Color="#00f260" Offset="0.0" />
+                            <GradientStop Color="#0575e6" Offset="1" />
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+  Store
                 </TextBlock>
             </StackPanel>
-            <Border x:Name="btn" CornerRadius="20" Background="White" Width="50" Height="50" BorderThickness="2" BorderBrush="MidnightBlue">
+            <Border x:Name="btn" CornerRadius="20" Background="White" Width="50" Height="50" BorderThickness="2" >
+                <Border.BorderBrush>
+                  
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop Color="#00f260" Offset="0.0" />
+                            <GradientStop Color="#0575e6" Offset="1" />
+                        </LinearGradientBrush>
+           
+                </Border.BorderBrush>
                 <Canvas.Left>
                     <System:Double>670</System:Double>
                 </Canvas.Left>
@@ -88,7 +139,13 @@
                 </Canvas.Top>
 
                 <Button x:Name="Exit" Width="30" Height="30" Background="White" Click="Exit_Click" BorderThickness="0"
-                       Content="X" FontSize="24" Foreground="MidnightBlue">
+                       Content="X" FontSize="24" >
+                    <Button.Foreground>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop Color="#00f260" Offset="0.0" />
+                            <GradientStop Color="#0575e6" Offset="1" />
+                        </LinearGradientBrush>
+                    </Button.Foreground>
                     <Button.Style>
                         <Style>
                             <Setter Property="Control.Template">

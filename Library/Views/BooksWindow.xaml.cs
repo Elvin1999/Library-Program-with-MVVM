@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,12 @@ namespace Library.Views
     /// </summary>
     public partial class BooksWindow : Window
     {
-        public BooksWindow()
+        public BookViewModel BookViewModel { get; set; }
+        public BooksWindow(BookViewModel BookViewModel)
         {
             InitializeComponent();
+            this.BookViewModel = BookViewModel;
+            DataContext = BookViewModel;
         }
     }
 }

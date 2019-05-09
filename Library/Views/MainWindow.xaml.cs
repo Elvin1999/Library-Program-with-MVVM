@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,8 +24,10 @@ namespace Library
         public MainWindow()
         {
             InitializeComponent();
+            MainViewModel = new MainViewModel();
+            DataContext = MainViewModel;
         }
-
+        public MainViewModel MainViewModel { get; set; }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
