@@ -83,7 +83,7 @@
   Store
                 </TextBlock>
             </StackPanel>
-            <Border x:Name="btn" CornerRadius="20" Background="White" Width="50" Height="50" BorderThickness="2" BorderBrush="{StaticResource FirstColor}">
+            <Border x:Name="btn" CornerRadius="10" Background="White" Width="50" Height="50" BorderThickness="2" BorderBrush="Red">
                
                 <Canvas.Left>
                     <System:Double>670</System:Double>
@@ -99,9 +99,8 @@
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="20"/>
                         </Style>
-                               
+
                     </Button.Resources>
-       
                 </Button>
 
             </Border>
