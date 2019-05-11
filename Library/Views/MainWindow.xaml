@@ -83,7 +83,7 @@
   Store
                 </TextBlock>
             </StackPanel>
-            <Border x:Name="btn" CornerRadius="10" Background="White" Width="50" Height="50" BorderThickness="2" BorderBrush="Red">
+            <Border x:Name="btn" CornerRadius="10" Background="White" Width="50" Height="50" BorderThickness="2" BorderBrush="{StaticResource FirstColor}">
                
                 <Canvas.Left>
                     <System:Double>670</System:Double>
@@ -92,12 +92,12 @@
                     <System:Double>15</System:Double>
                 </Canvas.Top>
 
-                <Button x:Name="Exit" Width="30" Height="30" Background="White" Click="Exit_Click" BorderThickness="0" Foreground="{StaticResource FirstColor}"
+                <Button x:Name="Exit" Width="46" Height="46" Background="White" Click="Exit_Click" BorderThickness="0" Foreground="{StaticResource FirstColor}"
                         Style="{StaticResource ExitButtonStyle}"
                        Content="X" FontSize="24" >
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="20"/>
+                            <Setter Property="CornerRadius" Value="10"/>
                         </Style>
 
                     </Button.Resources>
