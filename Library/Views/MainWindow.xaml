@@ -30,22 +30,8 @@
 
                         <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
                                 Command="{Binding BookSectionCommand}"
-                                Content="Books" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}"
+                                Content="Books" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}" Style="{StaticResource NotDefaultButton}"
                                 >
-                            <Button.Style>
-                                <Style>
-                                 
-                                    <Setter Property="Control.Template">
-                                        <Setter.Value>
-                                            <ControlTemplate TargetType="{x:Type Button}">
-                                                <Border Background="{TemplateBinding Background}">
-                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                                </Border>
-                                            </ControlTemplate>
-                                        </Setter.Value>
-                                    </Setter>
-                                </Style>
-                            </Button.Style>
                         </Button>
                     </Border>
 
