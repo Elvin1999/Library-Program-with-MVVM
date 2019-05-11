@@ -17,7 +17,7 @@
                 </Canvas.Left>
             </Rectangle>
             <Rectangle Width="210" Height="600" Fill="White" RadiusX="20" RadiusY="20">
-                <Canvas.Left>540</Canvas.Left>
+                <Canvas.Left>542</Canvas.Left>
             </Rectangle>
             <Ellipse Width="350" Height="600" Fill="White">
                 <Canvas.Left>380</Canvas.Left>
@@ -92,9 +92,9 @@
                     <System:Double>15</System:Double>
                 </Canvas.Top>
 
-                <Button x:Name="Exit" Width="46" Height="46" Background="White" Click="Exit_Click" BorderThickness="0" Foreground="{StaticResource FirstColor}"
+                <Button x:Name="Exit" Click="Exit_Click"
                         Style="{StaticResource ExitButtonStyle}"
-                       Content="X" FontSize="24" >
+                       >
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
