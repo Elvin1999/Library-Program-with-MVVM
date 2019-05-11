@@ -11,14 +11,7 @@
         >
     <Grid>
         <Canvas>
-            <Rectangle RadiusX="20" RadiusY="20" Width="700" Height="600">
-                <Rectangle.Fill>
-                       <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#00f260" Offset="0.0" />
-                            <GradientStop Color="#0575e6" Offset="1" />
-                        </LinearGradientBrush>
-               
-                </Rectangle.Fill>
+            <Rectangle RadiusX="20" RadiusY="20" Width="700" Height="600" Fill="{StaticResource FirstColor}">
                 <Canvas.Left>50</Canvas.Left>
             </Rectangle>
         </Canvas>

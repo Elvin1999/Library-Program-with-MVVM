@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library.Views"
         mc:Ignorable="d"
-        Title="ClientsWindow" Height="450" Width="800">
+        Title="ClientsWindow" Height="600" Width="800" AllowsTransparency="True" Background="Transparent" WindowStyle="None">
     <Grid>
-        
+        <Canvas>
+            <Rectangle RadiusX="20" RadiusY="20" Width="700" Height="600" Fill="{StaticResource FirstColor}">
+                <Canvas.Left>50</Canvas.Left>
+            </Rectangle>
+        </Canvas>
     </Grid>
 </Window>

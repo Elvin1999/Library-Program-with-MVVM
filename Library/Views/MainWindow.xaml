@@ -11,14 +11,7 @@
     <Grid>
 
         <Canvas>
-            <Rectangle RadiusX="20" RadiusY="20" Width="700" Height="600">
-                <Rectangle.Fill>
-                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                        <GradientStop Color="#00f260" Offset="0.0" />
-                        <GradientStop Color="#0575e6" Offset="1" />
-                    </LinearGradientBrush>
-
-                </Rectangle.Fill>
+            <Rectangle RadiusX="20" RadiusY="20" Width="700" Height="600" Fill="{StaticResource FirstColor}">
                 <Canvas.Left>
                     <System:Double>50</System:Double>
                 </Canvas.Left>
@@ -37,28 +30,18 @@
 
                         <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
                                 Command="{Binding BookSectionCommand}"
-                                Content="Books" FontFamily="Comic Sans MS" FontSize="24"
+                                Content="Books" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}"
                                 >
-                            <Button.Foreground>
-                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                    <GradientStop Color="#00f260" Offset="0.0" />
-                                    <GradientStop Color="#0575e6" Offset="1" />
-                                </LinearGradientBrush>
-                            </Button.Foreground>
+                          
                         </Button>
                     </Border>
 
                     <Border Background="White" CornerRadius="50" Width="130" Height="60" 
                         Margin="20,0,0,0">
                         <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
-                                Content="Filials" FontFamily="Comic Sans MS" FontSize="24"
+                                Content="Filials" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}"
                                 >
-                            <Button.Foreground>
-                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                    <GradientStop Color="#00f260" Offset="0.0" />
-                                    <GradientStop Color="#0575e6" Offset="1" />
-                                </LinearGradientBrush>
-                            </Button.Foreground>
+                           
                         </Button>
                     </Border>
                 </StackPanel>
@@ -67,28 +50,17 @@
                     <Border Background="White" CornerRadius="50" Width="130" Height="60" 
                         Margin="20,0,0,0">
                         <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
-                                Content="Clients" FontFamily="Comic Sans MS" FontSize="24"
+                                Content="Clients" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}"
                                >
-                            <Button.Foreground>
-                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                    <GradientStop Color="#00f260" Offset="0.0" />
-                                    <GradientStop Color="#0575e6" Offset="1" />
-                                </LinearGradientBrush>
-                            </Button.Foreground>
+                           
                         </Button>
                     </Border>
                     <Border Background="White" CornerRadius="50" Width="130" Height="60" 
                         Margin="20,0,0,0">
                         <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
-                                Content="Workers" FontFamily="Comic Sans MS" FontSize="24"
+                                Content="Workers" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}"
                                 >
-                            <Button.Foreground>
-                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                    <GradientStop Color="#00f260" Offset="0.0" />
-                                    <GradientStop Color="#0575e6" Offset="1" />
-                                </LinearGradientBrush>
-                            </Button.Foreground>
-
+                        
                         </Button>
                     </Border>
                 </StackPanel>
@@ -101,36 +73,18 @@
                 Welcome to our book store
             </TextBlock>
             <StackPanel Background="White" Width="300" Height="350" Canvas.Top="140" Canvas.Left="440">
-                <TextBlock Name="bookStoreTxtb" FontSize="80" FontFamily="Comic Sans MS" TextAlignment="Left">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#00f260" Offset="0.0" />
-                            <GradientStop Color="#0575e6" Offset="1" />
-                        </LinearGradientBrush>
-
-                    </TextBlock.Foreground>
+                <TextBlock Name="bookStoreTxtb" FontSize="80" FontFamily="Comic Sans MS" TextAlignment="Left" Foreground="{StaticResource FirstColor}" >
+               
  Book 
                 </TextBlock>
-                
-                <TextBlock Name="bookStoreTxtb2" FontSize="80" FontFamily="Comic Sans MS"  TextAlignment="Center">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#00f260" Offset="0.0" />
-                            <GradientStop Color="#0575e6" Offset="1" />
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>
+
+                <TextBlock Name="bookStoreTxtb2" FontSize="80" FontFamily="Comic Sans MS"  TextAlignment="Center" Foreground="{StaticResource FirstColor}">
+                   
   Store
                 </TextBlock>
             </StackPanel>
-            <Border x:Name="btn" CornerRadius="20" Background="White" Width="50" Height="50" BorderThickness="2" >
-                <Border.BorderBrush>
-                  
-                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#00f260" Offset="0.0" />
-                            <GradientStop Color="#0575e6" Offset="1" />
-                        </LinearGradientBrush>
-           
-                </Border.BorderBrush>
+            <Border x:Name="btn" CornerRadius="20" Background="White" Width="50" Height="50" BorderThickness="2" BorderBrush="{StaticResource FirstColor}">
+               
                 <Canvas.Left>
                     <System:Double>670</System:Double>
                 </Canvas.Left>
@@ -138,7 +92,8 @@
                     <System:Double>15</System:Double>
                 </Canvas.Top>
 
-                <Button x:Name="Exit" Width="30" Height="30" Background="White" Click="Exit_Click" BorderThickness="0"
+                <Button x:Name="Exit" Width="30" Height="30" Background="White" Click="Exit_Click" BorderThickness="0" Foreground="{StaticResource FirstColor}"
+                        Style="{StaticResource ExitButtonStyle}"
                        Content="X" FontSize="24" >
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
@@ -146,26 +101,7 @@
                         </Style>
                                
                     </Button.Resources>
-                    
-                    <Button.Foreground>
-                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Color="#00f260" Offset="0.0" />
-                            <GradientStop Color="#0575e6" Offset="1" />
-                        </LinearGradientBrush>
-                    </Button.Foreground>
-                    <Button.Style>
-                        <Style>
-                            <Setter Property="Control.Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border Background="{TemplateBinding Background}">
-                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
+       
                 </Button>
 
             </Border>
