@@ -17,7 +17,7 @@ namespace Library.ViewModels
         public List<Genre> Genres { get; set; }
         public AddCommand AddCommand => new AddCommand(this);
         public UpdateCommand UpdateCommand => new UpdateCommand(this);
-        public DeleteCommand DeleteCommand => new DeleteCommand();     
+        public DeleteCommand DeleteCommand => new DeleteCommand(this);     
         private ObservableCollection<Book> allBooks;
         public ObservableCollection<Book> AllBooks
         {

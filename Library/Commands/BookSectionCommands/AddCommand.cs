@@ -25,7 +25,7 @@ namespace Library.Commands.BookSectionCommands
 
         public void Execute(object parameter)
         {
-       
+      
             var item = BookViewModel.AllBooks.FirstOrDefault(x => x.Id == BookViewModel.CurrentBook.Id);
             if (BookViewModel.AllBooks.Count != 0)
             {
