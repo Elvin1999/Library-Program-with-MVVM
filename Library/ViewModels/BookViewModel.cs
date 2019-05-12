@@ -31,6 +31,10 @@ namespace Library.ViewModels
                 OnPropertyChanged(new PropertyChangedEventArgs(nameof(AllBooks)));
             }
         }
+        public BookViewModel()
+        {
+            CurrentBook = new Book();
+        }
         private Book currentBook;
         public Book CurrentBook
         {
