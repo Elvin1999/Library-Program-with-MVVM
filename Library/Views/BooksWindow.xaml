@@ -19,11 +19,60 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Background="LightBlue" Margin="65,5,0,0">
-
+                <Grid Grid.Row="0" Margin="65,5,0,0">
                     <Grid.Width>670</Grid.Width>
                     <Grid.Height>300</Grid.Height>
-                                     
+
+                    <StackPanel Orientation="Horizontal">
+                        
+                        <StackPanel Orientation="Vertical">
+                            <Button Width="130" Height="60" Background="White" BorderThickness="0" BorderBrush="AliceBlue" Margin="430,10,0,0"
+                                Command="{Binding AddCommand}"
+                                Content="Add" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}" Style="{StaticResource NotDefaultButton}"
+                                >
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+
+                                </Button.Resources>
+                            </Button>
+                            <Button Width="130" Height="60" Background="White" BorderThickness="0" BorderBrush="AliceBlue" Margin="430,20,0,0"
+                                Command="{Binding UpdateCommand}"
+                                Content="Update" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}" Style="{StaticResource NotDefaultButton}"
+                                >
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+
+                                </Button.Resources>
+                            </Button>
+                            <Button Width="130" Height="60" Background="White" BorderThickness="0" BorderBrush="AliceBlue" Margin="430,20,0,0"
+                                Command="{Binding DeleteCommand}"
+                                Content="Delete" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}" Style="{StaticResource NotDefaultButton}"
+                                >
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+
+                                </Button.Resources>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                    <Button x:Name="Exit" Click="Exit_Click"
+                        Style="{StaticResource ReturnButtonStyle}" Margin="570,-235,0,0"
+                       >
+                        
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+
+                        </Button.Resources>
+                    </Button>
+
                 </Grid>
                 <Grid Grid.Row="1" Margin="65,5,0,0">
 

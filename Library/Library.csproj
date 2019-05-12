@@ -55,7 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\BookSectionCommands\AddCommand.cs" />
     <Compile Include="Commands\BookSectionCommand.cs" />
+    <Compile Include="Commands\BookSectionCommands\DeleteCommand.cs" />
+    <Compile Include="Commands\BookSectionCommands\UpdateCommand.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BookViewModel.cs" />
     <Compile Include="ViewModels\ClientViewModel.cs" />

@@ -27,5 +27,10 @@ namespace Library.Views
             this.BookViewModel = BookViewModel;
             DataContext = BookViewModel;
         }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

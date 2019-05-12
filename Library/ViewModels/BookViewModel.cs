@@ -6,11 +6,18 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using Library.Entities;
+using Library.Commands.BookSectionCommands;
 
 namespace Library.ViewModels
 {
     public class BookViewModel : BaseViewModel
     {
+        public List<Author> Authors { get; set; }
+        public List<Filial> Filials { get; set; }
+        public List<Genre> Genres { get; set; }
+        public AddCommand AddCommand => new AddCommand();
+        public UpdateCommand UpdateCommand => new UpdateCommand();
+        public DeleteCommand DeleteCommand => new DeleteCommand();
         private Book currentBook;
         public Book CurrentBook
         {
