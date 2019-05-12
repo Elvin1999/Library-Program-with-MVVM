@@ -27,11 +27,17 @@ namespace Library.Commands.BookSectionCommands
         {
        
             var item = BookViewModel.AllBooks.FirstOrDefault(x => x.Id == BookViewModel.CurrentBook.Id);
-
+            if (BookViewModel.AllBooks.Count != 0)
+            {
+                int index = BookViewModel.AllBooks.Count - 1;
+                int newID = BookViewModel.AllBooks[index].Id + 1;
+                BookViewModel.CurrentBook.Id = newID;
+            }
             if (item == null)
             {
               
                 BookViewModel.AllBooks.Add(BookViewModel.CurrentBook);
+                
                 MessageBoxResult add = MessageBox.Show("Added");
                 BookViewModel.CurrentBook = new Book();
                 BookViewModel.SelectedBook = new Book();
