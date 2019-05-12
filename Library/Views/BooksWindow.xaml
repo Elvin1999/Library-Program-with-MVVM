@@ -14,6 +14,87 @@
             <Rectangle RadiusX="20" RadiusY="20" Width="700" Height="600" Fill="{StaticResource FirstColor}">
                 <Canvas.Left>50</Canvas.Left>
             </Rectangle>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="LightBlue" Margin="65,5,0,0">
+
+                    <Grid.Width>670</Grid.Width>
+                    <Grid.Height>300</Grid.Height>
+                                     
+                </Grid>
+                <Grid Grid.Row="1" Margin="65,5,0,0">
+
+                    <Grid.Width>670</Grid.Width>
+                    <Grid.Height>280</Grid.Height>
+                    <ListView ItemsSource="{Binding AllBooks}" SelectedItem="{Binding SelectedGroup}" Width="670" HorizontalAlignment="Left" Background="{StaticResource FirstColor}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="No" Width="35">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Padding="5,0" Text="{Binding No}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="BookName" Width="100">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Padding="5,0" Text="{Binding Name}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Author" Width="100">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Padding="5,0" Text="{Binding Level.Name}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Filial" Width="100">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Padding="5,0" Text="{Binding Filial.Name}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Genre" Width="100">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Padding="5,0" Text="{Binding Subject.Name}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="PageCount" Width="70">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Padding="5,0" Text="{Binding Note}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="SalePrice" Width="70">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Padding="5,0" Text="{Binding Note}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="PurchasePrice" Width="90">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Padding="5,0" Text="{Binding Note}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+
+                        </ListView.View>
+                    </ListView>
+
+                </Grid>
+            </Grid>
         </Canvas>
     </Grid>
 </Window>

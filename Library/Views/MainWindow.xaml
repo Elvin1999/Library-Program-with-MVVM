@@ -25,50 +25,62 @@
             </Ellipse>
             <StackPanel Orientation="Vertical" Width="300" Height="150" Canvas.Left="55" Canvas.Top="20">
                 <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                    <Border Background="White" CornerRadius="10" Width="130" Height="60" 
-                        Margin="20,0,0,0">
-
-                        <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
+                    
+                        <Button Width="130" Height="60" Background="White" BorderThickness="0" BorderBrush="AliceBlue" Margin="20,0,0,0"
                                 Command="{Binding BookSectionCommand}"
                                 Content="Books" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}" Style="{StaticResource NotDefaultButton}"
                                 >
-                        </Button>
-                    </Border>
+                        <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
 
-                    <Border Background="White" CornerRadius="10" Width="130" Height="60" 
-                        Margin="20,0,0,0">
-                        <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
-                                Content="Filials" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}"
-                             Style="{StaticResource NotDefaultButton}"   >
-                            
-                        </Button>
-                    </Border>
+                        </Button.Resources>
+                    </Button>
+
+
+                    <Button Width="130" Height="60" Background="White" BorderThickness="0" BorderBrush="AliceBlue" Margin="20,0,0,0"
+                                Command="{Binding FilialSectionCommand}"
+                                Content="Filials" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}" Style="{StaticResource NotDefaultButton}"
+                                >
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+
+                        </Button.Resources>
+                    </Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal"  Margin="0,10,0,0">
-
-                    <Border Background="White" CornerRadius="10" Width="130" Height="60" 
-                        Margin="20,0,0,0">
-                        <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
+                    <Button Width="130" Height="60" Background="White" BorderThickness="0" BorderBrush="AliceBlue" Margin="20,0,0,0"
+                                Command="{Binding ClientSectionCommand}"
                                 Content="Clients" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}" Style="{StaticResource NotDefaultButton}"
-                               >
-                           
-                        </Button>
-                    </Border>
-                    <Border Background="White" CornerRadius="10" Width="130" Height="60" 
-                        Margin="20,0,0,0">
-                        <Button Width="105" Height="35" Background="White" BorderThickness="0" BorderBrush="AliceBlue"
+                                >
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+
+                        </Button.Resources>
+                    </Button>
+                    <Button Width="130" Height="60" Background="White" BorderThickness="0" BorderBrush="AliceBlue" Margin="20,0,0,0"
+                                Command="{Binding WorkerSectionCommand}"
                                 Content="Workers" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}" Style="{StaticResource NotDefaultButton}"
                                 >
-                         
-                        </Button>
-                    </Border>
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+
+                        </Button.Resources>
+                    </Button>
                 </StackPanel>
                 
             </StackPanel>
-            <TextBlock Canvas.Left="100" Canvas.Top="170" FontSize="35" FontFamily="Berlin Sans FB Demi" Foreground="White">
+            <TextBlock Canvas.Left="100" Canvas.Top="200" FontSize="35" FontFamily="Berlin Sans FB Demi" Foreground="White">
                 book store
             </TextBlock>
-            <TextBlock Canvas.Left="100" Canvas.Top="220" FontSize="16" FontFamily="Berlin Sans FB Demi" Foreground="WhiteSmoke">
+            <TextBlock Canvas.Left="100" Canvas.Top="250" FontSize="16" FontFamily="Berlin Sans FB Demi" Foreground="WhiteSmoke">
                 Welcome to our book store
             </TextBlock>
             <StackPanel Background="White" Width="300" Height="350" Canvas.Top="140" Canvas.Left="440">
