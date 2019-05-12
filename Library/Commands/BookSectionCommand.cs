@@ -22,6 +22,11 @@ namespace Library.Commands
         {
             return true;
         }
+        public MainWindow MainWindow { get; set; }
+        public BookSectionCommand(MainWindow MainWindow)
+        {
+            this.MainWindow = MainWindow;
+        }
         public void Execute(object parameter)
         {
             BookViewModel bookViewModel = new BookViewModel();
@@ -182,9 +187,10 @@ namespace Library.Commands
                 },
 
             };
+            
             BooksWindow bookWindow = new BooksWindow(bookViewModel);
+            MainWindow.Close();
             bookWindow.ShowDialog();
-
         }
     }
 }

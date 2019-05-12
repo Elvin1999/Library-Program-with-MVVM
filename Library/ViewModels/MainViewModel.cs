@@ -9,6 +9,11 @@ namespace Library.ViewModels
 {
    public class MainViewModel:BaseViewModel
     {
-        public BookSectionCommand BookSectionCommand => new BookSectionCommand();
+        public MainWindow MainWindow { get; set; }
+        public MainViewModel(MainWindow MainWindow)
+        {
+            this.MainWindow = MainWindow;
+        }
+        public BookSectionCommand BookSectionCommand => new BookSectionCommand(MainWindow);
     }
 }

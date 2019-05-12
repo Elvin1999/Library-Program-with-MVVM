@@ -24,7 +24,7 @@ namespace Library
         public MainWindow()
         {
             InitializeComponent();
-            MainViewModel = new MainViewModel();
+            MainViewModel = new MainViewModel(this);
             DataContext = MainViewModel;
         }
         public MainViewModel MainViewModel { get; set; }
