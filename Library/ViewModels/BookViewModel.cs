@@ -15,7 +15,7 @@ namespace Library.ViewModels
         public List<Author> Authors { get; set; }
         public List<Filial> Filials { get; set; }
         public List<Genre> Genres { get; set; }
-        public AddCommand AddCommand => new AddCommand();
+        public AddCommand AddCommand => new AddCommand(this);
         public UpdateCommand UpdateCommand => new UpdateCommand();
         public DeleteCommand DeleteCommand => new DeleteCommand();
         private Book currentBook;

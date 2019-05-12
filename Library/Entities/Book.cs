@@ -17,7 +17,10 @@ namespace Library.Entities
         public int PageCount { get; set; }
         public double PurchasePrice { get; set; }
         public double SalePrice { get; set; }
-
+        public Book()
+        {
+     
+        }
         public Book Clone()
         {
             Book newbook = new Book();
