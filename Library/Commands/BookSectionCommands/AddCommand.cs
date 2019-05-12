@@ -30,6 +30,7 @@ namespace Library.Commands.BookSectionCommands
 
             if (item == null)
             {
+              
                 BookViewModel.AllBooks.Add(BookViewModel.CurrentBook);
                 MessageBoxResult add = MessageBox.Show("Added");
                 BookViewModel.CurrentBook = new Book();
@@ -39,7 +40,7 @@ namespace Library.Commands.BookSectionCommands
             else
             {
                 MessageBoxResult add = MessageBox.Show("Can not add this item, you can only update and delete");
-            }
-        }
+    }
+}
     }
 }

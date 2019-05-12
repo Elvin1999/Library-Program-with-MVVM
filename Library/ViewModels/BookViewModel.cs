@@ -16,21 +16,8 @@ namespace Library.ViewModels
         public List<Filial> Filials { get; set; }
         public List<Genre> Genres { get; set; }
         public AddCommand AddCommand => new AddCommand(this);
-        public UpdateCommand UpdateCommand => new UpdateCommand();
-        public DeleteCommand DeleteCommand => new DeleteCommand();
-        private Book currentBook;
-        public Book CurrentBook
-        {
-            get
-            {
-                return currentBook;
-            }
-            set
-            {
-                currentBook = value;
-                OnPropertyChanged(new PropertyChangedEventArgs(nameof(CurrentBook)));
-            }
-        }
+        public UpdateCommand UpdateCommand => new UpdateCommand(this);
+        public DeleteCommand DeleteCommand => new DeleteCommand();     
         private ObservableCollection<Book> allBooks;
         public ObservableCollection<Book> AllBooks
         {
@@ -44,8 +31,22 @@ namespace Library.ViewModels
                 OnPropertyChanged(new PropertyChangedEventArgs(nameof(AllBooks)));
             }
         }
+        private Book currentBook;
+        public Book CurrentBook
+        {
+            get
+            {
+                return currentBook;
+            }
+            set
+            {
+                currentBook = value;
+                OnPropertyChanged(new PropertyChangedEventArgs(nameof(CurrentBook)));
+            }
+        }
+
         private Book selectedBook;
-        public Book SelectedBook
+        public  Book SelectedBook
         {
             get
             {
@@ -61,5 +62,6 @@ namespace Library.ViewModels
                 OnPropertyChanged(new PropertyChangedEventArgs(nameof(SelectedBook)));
             }
         }
+
     }
 }
