@@ -49,11 +49,11 @@
                                 <GridViewColumn Header="Author" Width="100">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Padding="5,0" Text="{Binding Level.Name}"></TextBlock>
+                                            <TextBlock Padding="5,0" Text="{Binding Author.Name}"></TextBlock>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Filial" Width="100">
+                                <GridViewColumn Header="Filial" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Padding="5,0" Text="{Binding Filial.Name}"></TextBlock>
@@ -63,28 +63,28 @@
                                 <GridViewColumn Header="Genre" Width="100">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Padding="5,0" Text="{Binding Subject.Name}"></TextBlock>
+                                            <TextBlock Padding="5,0" Text="{Binding Genre.Name}"></TextBlock>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
                                 <GridViewColumn Header="PageCount" Width="70">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Padding="5,0" Text="{Binding Note}"></TextBlock>
+                                            <TextBlock Padding="5,0" Text="{Binding PageCount}"></TextBlock>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
                                 <GridViewColumn Header="SalePrice" Width="70">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Padding="5,0" Text="{Binding Note}"></TextBlock>
+                                            <TextBlock Padding="5,0" Text="{Binding SalePrice}"></TextBlock>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
                                 <GridViewColumn Header="PurchasePrice" Width="90">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Padding="5,0" Text="{Binding Note}"></TextBlock>
+                                            <TextBlock Padding="5,0" Text="{Binding PurchasePrice}"></TextBlock>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
