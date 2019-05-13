@@ -30,6 +30,10 @@ namespace Library.Views
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
+            
+            MainWindow mainWindow = new MainWindow();
+            MainViewModel mainView = new MainViewModel(mainWindow);
+            mainView.MainWindow.Show();
             this.Close();
         }
     }
