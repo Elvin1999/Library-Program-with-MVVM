@@ -15,5 +15,6 @@ namespace Library.ViewModels
             this.MainWindow = MainWindow;
         }
         public BookSectionCommand BookSectionCommand => new BookSectionCommand(MainWindow);
+        public FilialSectionCommand FilialSectionCommand => new FilialSectionCommand(MainWindow);
     }
 }

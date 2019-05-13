@@ -25,7 +25,7 @@ namespace Library.Commands.BookSectionCommands
 
         public void Execute(object parameter)
         {
-      
+
             var item = BookViewModel.AllBooks.FirstOrDefault(x => x.Id == BookViewModel.CurrentBook.Id);
             if (BookViewModel.AllBooks.Count != 0)
             {
@@ -35,9 +35,9 @@ namespace Library.Commands.BookSectionCommands
             }
             if (item == null)
             {
-              
+
                 BookViewModel.AllBooks.Add(BookViewModel.CurrentBook);
-                
+
                 MessageBoxResult add = MessageBox.Show("Added");
                 BookViewModel.CurrentBook = new Book();
                 BookViewModel.SelectedBook = new Book();
@@ -46,7 +46,7 @@ namespace Library.Commands.BookSectionCommands
             else
             {
                 MessageBoxResult add = MessageBox.Show("Can not add this item, you can only update and delete");
-    }
-}
+            }
+        }
     }
 }

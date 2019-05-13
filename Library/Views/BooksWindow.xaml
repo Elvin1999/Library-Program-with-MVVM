@@ -133,7 +133,7 @@ TextAlignment="Right" FontSize="18"></TextBox>
                                 <GridViewColumn Header="No" Width="35">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Padding="5,0" Text="{Binding Id}"></TextBlock>
+                                            <TextBlock Padding="5,0" Text="{Binding No}"></TextBlock>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>

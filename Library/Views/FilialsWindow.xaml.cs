@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,20 @@ namespace Library.Views
     /// </summary>
     public partial class FilialsWindow : Window
     {
-        public FilialsWindow()
+        public FilialViewModel FilialViewModel { get; set; }
+        public FilialsWindow(FilialViewModel FilialViewModel)
         {
             InitializeComponent();
+            this.FilialViewModel = FilialViewModel;
+            DataContext = FilialViewModel; 
+        }
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow mainWindow = new MainWindow();
+            MainViewModel mainView = new MainViewModel(mainWindow);
+            mainView.MainWindow.Show();
+            this.Close();
         }
     }
 }

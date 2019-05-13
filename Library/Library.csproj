@@ -59,6 +59,10 @@
     <Compile Include="Commands\BookSectionCommand.cs" />
     <Compile Include="Commands\BookSectionCommands\DeleteCommand.cs" />
     <Compile Include="Commands\BookSectionCommands\UpdateCommand.cs" />
+    <Compile Include="Commands\FilialSectionCommand.cs" />
+    <Compile Include="Commands\FilialSectionCommans\AddCommand.cs" />
+    <Compile Include="Commands\FilialSectionCommans\DeleteCommand.cs" />
+    <Compile Include="Commands\FilialSectionCommans\UpdateCommand.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BookViewModel.cs" />
     <Compile Include="ViewModels\ClientViewModel.cs" />
