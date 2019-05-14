@@ -17,8 +17,21 @@ namespace Library.ViewModels
         public List<Genre> Genres { get; set; }
         public AddCommand AddCommand => new AddCommand(this);
         public UpdateCommand UpdateCommand => new UpdateCommand(this);
-        public DeleteCommand DeleteCommand => new DeleteCommand(this);     
+        public DeleteCommand DeleteCommand => new DeleteCommand(this);
         private ObservableCollection<Book> allBooks;
+        private int state = 0;
+        public int State
+        {
+            get
+            {
+                return state;
+            }
+            set
+            {
+                state = value;
+                OnPropertyChanged(new PropertyChangedEventArgs(nameof(State)));
+            }
+        }
         public ObservableCollection<Book> AllBooks
         {
             get
@@ -50,17 +63,21 @@ namespace Library.ViewModels
         }
 
         private Book selectedBook;
-        public  Book SelectedBook
+        public Book SelectedBook
         {
             get
             {
+                
                 return selectedBook;
             }
             set
             {
                 selectedBook = value;
+
+                
                 if (value != null)
                 {
+                    State = 1;
                     CurrentBook = SelectedBook.Clone();
                 }
                 OnPropertyChanged(new PropertyChangedEventArgs(nameof(SelectedBook)));

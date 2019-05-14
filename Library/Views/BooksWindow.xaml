@@ -192,10 +192,34 @@ TextAlignment="Right" FontSize="18"></TextBox>
                     </ListView>
                     <StackPanel Orientation="Horizontal" Margin="0,-200,0,0">
                         <Button Width="150" Height="30" Background="SpringGreen" Content="Sell" Command="{Binding SellCommand}">
-
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="IsEnabled" Value="False"></Setter>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding State, Mode=TwoWay}" Value="0">
+                                            <Setter Property="IsEnabled" Value="False"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding State, Mode=TwoWay}" Value="1">
+                                            <Setter Property="IsEnabled" Value="True"></Setter>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
                         </Button>
                         <Button Width="150" Height="30" Background="SpringGreen" Content="Rent" Margin="20,0,0,0" Command="{Binding Rent}">
-
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="IsEnabled" Value="False"></Setter>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding State, Mode=TwoWay}" Value="0">
+                                            <Setter Property="IsEnabled" Value="False"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding State, Mode=TwoWay}" Value="1">
+                                            <Setter Property="IsEnabled" Value="True"></Setter>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
                         </Button>
                     </StackPanel>
                 </Grid>
