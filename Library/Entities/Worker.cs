@@ -15,7 +15,6 @@ namespace Library.Entities
         public string PhoneNumber { get; set; }
         public int Salary { get; set; }
         public Filial Filial { get; set; }
-
         internal Worker Clone()
         {
             Worker newWorker = new Worker()

@@ -30,7 +30,25 @@ namespace Library.Commands
         {
             WorkerViewModel workerViewModel = new WorkerViewModel();
             workerViewModel.AllWorkers = new ObservableCollection<Worker>();
-
+            workerViewModel.Filials = new List<Filial>()
+            {
+                new Filial()
+                {
+                    Id=1,Name="Nizami Filiali"
+                },
+                new Filial()
+                {
+                    Id=2,Name="Ehmedli Filiali"
+                },
+                new Filial()
+                {
+                    Id=2,Name="Nerimanov Filiali"
+                },
+                new Filial()
+                {
+                    Id=2,Name="Yasamal Filiali"
+                },
+            };
 
 
             WorkersWindow workerWindow = new WorkersWindow(workerViewModel);

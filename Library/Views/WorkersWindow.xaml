@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library.Views"
         mc:Ignorable="d"
-        Title="WorkersWindow" Height="450" Width="800" AllowsTransparency="True" Background="Transparent"
+        Title="WorkersWindow" Height="600" Width="800" AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
         <Canvas>
@@ -34,16 +34,25 @@
                             <Label Width="115"  Height="35" Content="Phonenumber" FontSize="14" Margin="0,20,0,0">
 
                             </Label>
-                            <Label Width="115"  Height="35" Content="Connection Datetime" FontSize="8" Margin="0,20,0,0">
+                            <Label Width="115"  Height="35" Content="Salary" FontSize="14" Margin="0,20,0,0">
+
+                            </Label>
+                            <Label Width="115"  Height="35" Content="Filials" FontSize="14" Margin="0,20,0,0">
 
                             </Label>
 
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Height="360" Width="160">
-                            <TextBox Text="{Binding CurrentClient.Name,Mode=TwoWay}" Height="30" Width="140" Margin="0,22,0,0"></TextBox>
-                            <TextBox Text="{Binding CurrentClient.Surname,Mode=TwoWay}" Height="30" Width="140" Margin="0,20,0,0"></TextBox>
-                            <TextBox Text="{Binding CurrentClient.PhoneNumber,Mode=TwoWay}" Height="30" Width="140" Margin="0,25,0,0"></TextBox>
-                            <DatePicker Text="{Binding CurrentClient.ConnectionDT,Mode=TwoWay}" Height="30" Width="140" Margin="0,22,0,0"></DatePicker>
+                            <TextBox Text="{Binding CurrentWorker.Name,Mode=TwoWay}" Height="30" Width="140" Margin="0,22,0,0"></TextBox>
+                            <TextBox Text="{Binding CurrentWorker.Surname,Mode=TwoWay}" Height="30" Width="140" Margin="0,20,0,0"></TextBox>
+                            <TextBox Text="{Binding CurrentWorker.PhoneNumber,Mode=TwoWay}" Height="30" Width="140" Margin="0,25,0,0"></TextBox>
+                            <TextBox Text="{Binding CurrentWorker.Salary,Mode=TwoWay}" Height="30" Width="140" Margin="0,25,0,0"></TextBox>
+                            <ComboBox Height="30" Width="140" Margin="0,30,0,0"                                                                     
+                                      ItemsSource="{Binding Filials}"
+                                      DisplayMemberPath="Name"
+                      SelectedValuePath="Id" SelectedValue="{Binding CurrentWorker.Filial, Mode=TwoWay}"
+                      SelectedItem="{Binding CurrentWorker.Filial}"
+                                      ></ComboBox>
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Height="360" Width="160" Margin="120,0,0,0">
                             <Button Width="130" Height="60" Background="White" BorderThickness="0" BorderBrush="AliceBlue" Margin="10,10,0,0"
@@ -96,7 +105,7 @@
 
                     <Grid.Width>670</Grid.Width>
                     <Grid.Height>250</Grid.Height>
-                    <ListView Name="listViewFilials" ItemsSource="{Binding AllClients}" SelectedItem="{Binding SelectedClient}" Width="670" HorizontalAlignment="Left" Background="{StaticResource FirstColor}">
+                    <ListView Name="listViewFilials" ItemsSource="{Binding AllWorkers}" SelectedItem="{Binding SelectedWorker}" Width="670" HorizontalAlignment="Left" Background="{StaticResource FirstColor}">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="No" Width="35">
@@ -132,10 +141,17 @@
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
 
-                                <GridViewColumn Header="Connection DT" Width="120">
+                                <GridViewColumn Header="Salary" Width="120">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Padding="5,0" Text="{Binding ConnectionDT}"></TextBlock>
+                                            <TextBlock Padding="5,0" Text="{Binding Salary}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Filial name" Width="120">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Padding="5,0" Text="{Binding Filial.Name}"></TextBlock>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>

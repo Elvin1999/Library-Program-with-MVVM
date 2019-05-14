@@ -15,6 +15,7 @@ namespace Library.ViewModels
         public AddCommand AddCommand => new AddCommand(this);
         public DeleteCommand DeleteCommand => new DeleteCommand(this);
         public UpdateCommand UpdateCommand => new UpdateCommand(this);
+        public List<Filial> Filials { get; set; }
         private ObservableCollection<Worker> allWorkers;
         public ObservableCollection<Worker> AllWorkers
         {
