@@ -68,6 +68,7 @@
     <Compile Include="Commands\FilialSectionCommans\DeleteCommand.cs" />
     <Compile Include="Commands\FilialSectionCommans\UpdateCommand.cs" />
     <Compile Include="Commands\RentCommand.cs" />
+    <Compile Include="Commands\RentSectionCommand.cs" />
     <Compile Include="Commands\SellCommand.cs" />
     <Compile Include="Commands\WorkerSectionCommand.cs" />
     <Compile Include="Commands\WorkerSectionCommands\AddCommand.cs" />
