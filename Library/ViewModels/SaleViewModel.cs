@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.ViewModels
 {
-    public class SellViewModel : BaseViewModel
+    public class SaleViewModel : BaseViewModel
     {
 
     }

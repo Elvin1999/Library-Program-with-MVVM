@@ -73,13 +73,15 @@
     <Compile Include="Commands\WorkerSectionCommands\AddCommand.cs" />
     <Compile Include="Commands\WorkerSectionCommands\DeleteCommand.cs" />
     <Compile Include="Commands\WorkerSectionCommands\UpdateCommand.cs" />
+    <Compile Include="Entities\Rent.cs" />
+    <Compile Include="Entities\Sale.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BookViewModel.cs" />
     <Compile Include="ViewModels\ClientViewModel.cs" />
     <Compile Include="ViewModels\FilialViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RentViewModel.cs" />
-    <Compile Include="ViewModels\SellViewModel.cs" />
+    <Compile Include="ViewModels\SaleViewModel.cs" />
     <Compile Include="Views\BooksWindow.xaml.cs">
       <DependentUpon>BooksWindow.xaml</DependentUpon>
     </Compile>
