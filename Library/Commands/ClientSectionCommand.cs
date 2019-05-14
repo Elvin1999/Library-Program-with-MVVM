@@ -11,26 +11,29 @@ using System.Windows.Input;
 
 namespace Library.Commands
 {
-   public class FilialSectionCommand:ICommand
+   public class ClientSectionCommand:ICommand
     {
         public event EventHandler CanExecuteChanged;
+        private int id = 0;
+        private int no = 0;
+        private int no2 = 0;
         public bool CanExecute(object parameter)
         {
             return true;
         }
         public MainWindow MainWindow { get; set; }
-        public FilialSectionCommand(MainWindow MainWindow)
+        public ClientSectionCommand(MainWindow MainWindow)
         {
             this.MainWindow = MainWindow;
         }
         public void Execute(object parameter)
         {
-            FilialViewModel filialViewModel = new FilialViewModel();
-            filialViewModel.AllFilials = new ObservableCollection<Filial>();
+            ClientViewModel clientViewModel = new ClientViewModel();
+            clientViewModel.AllClients = new ObservableCollection<Client>();
 
-           
 
-            FilialsWindow filialWindow = new FilialsWindow(filialViewModel);
+
+            ClientsWindow filialWindow = new ClientsWindow(clientViewModel);
             MainWindow.Close();
             filialWindow.ShowDialog();
         }

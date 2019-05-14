@@ -15,5 +15,16 @@ namespace Library.Entities
         public string PhoneNumber { get; set; }
         public DateTime ConnectionDT { get; set; }
 
+        public Client Clone()
+        {
+            Client newClient = new Client();
+            newClient.Id = this.Id;
+            newClient.No = this.No;
+            newClient.Name = this.Name;
+            newClient.PhoneNumber = this.PhoneNumber;
+            newClient.Surname = this.Surname;
+            newClient.ConnectionDT = this.ConnectionDT;
+            return newClient;
+        }
     }
 }

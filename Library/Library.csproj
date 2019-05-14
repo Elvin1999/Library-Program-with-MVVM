@@ -55,10 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\ClientSectionCommand.cs" />
+    <Compile Include="Commands\ClientSectionCommands\AddCommand.cs" />
     <Compile Include="Commands\BookSectionCommands\AddCommand.cs" />
     <Compile Include="Commands\BookSectionCommand.cs" />
     <Compile Include="Commands\BookSectionCommands\DeleteCommand.cs" />
     <Compile Include="Commands\BookSectionCommands\UpdateCommand.cs" />
+    <Compile Include="Commands\ClientSectionCommands\DeleteCommand.cs" />
+    <Compile Include="Commands\ClientSectionCommands\UpdateCommand.cs" />
     <Compile Include="Commands\FilialSectionCommand.cs" />
     <Compile Include="Commands\FilialSectionCommans\AddCommand.cs" />
     <Compile Include="Commands\FilialSectionCommans\DeleteCommand.cs" />

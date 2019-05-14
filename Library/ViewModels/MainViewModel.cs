@@ -16,5 +16,6 @@ namespace Library.ViewModels
         }
         public BookSectionCommand BookSectionCommand => new BookSectionCommand(MainWindow);
         public FilialSectionCommand FilialSectionCommand => new FilialSectionCommand(MainWindow);
+        public ClientSectionCommand ClientSectionCommand => new ClientSectionCommand(MainWindow);
     }
 }

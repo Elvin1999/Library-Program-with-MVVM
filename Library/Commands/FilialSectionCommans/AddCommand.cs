@@ -36,7 +36,6 @@ namespace Library.Commands.FilialSectionCommans
                 int newID = FilialViewModel.AllFilials[index].Id + 1;
                 FilialViewModel.CurrentFilial.Id = newID;
                 FilialViewModel.CurrentFilial.No = newID;
-
             }
             var item = FilialViewModel.AllFilials.FirstOrDefault(x => x.Id == FilialViewModel.CurrentFilial.Id);
             if (item == null)
