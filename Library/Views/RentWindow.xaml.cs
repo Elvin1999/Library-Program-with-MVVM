@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,21 @@ namespace Library.Views
     /// </summary>
     public partial class RentWindow : Window
     {
-        public RentWindow()
+        public RentViewModel RentViewModel { get; set; }
+        public RentWindow(RentViewModel RentViewModel)
         {
             InitializeComponent();
+            this.RentViewModel = RentViewModel;
+            DataContext = RentViewModel;
         }
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow mainWindow = new MainWindow();
+            MainViewModel mainView = new MainViewModel(mainWindow);
+            mainView.MainWindow.Show();
+            this.Close();
+        }
+
     }
 }
