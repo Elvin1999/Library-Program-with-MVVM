@@ -206,7 +206,7 @@ TextAlignment="Right" FontSize="18"></TextBox>
                                 </Style>
                             </Button.Style>
                         </Button>
-                        <Button Width="150" Height="30" Background="SpringGreen" Content="Rent" Margin="20,0,0,0" Command="{Binding Rent}">
+                        <Button Width="150" Height="30" Background="SpringGreen" Content="Rent" Margin="20,0,0,0" Command="{Binding RentCommand}">
                             <Button.Style>
                                 <Style TargetType="{x:Type Button}">
                                     <Setter Property="IsEnabled" Value="False"></Setter>

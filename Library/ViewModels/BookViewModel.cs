@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using Library.Entities;
 using Library.Commands.BookSectionCommands;
+using Library.Commands;
+using Library.Views;
 
 namespace Library.ViewModels
 {
@@ -44,8 +46,10 @@ namespace Library.ViewModels
                 OnPropertyChanged(new PropertyChangedEventArgs(nameof(AllBooks)));
             }
         }
+        public BooksWindow BooksWindow { get; set; }
         public BookViewModel()
         {
+           
             CurrentBook = new Book();
         }
         private Book currentBook;

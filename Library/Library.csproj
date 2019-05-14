@@ -67,33 +67,20 @@
     <Compile Include="Commands\FilialSectionCommans\AddCommand.cs" />
     <Compile Include="Commands\FilialSectionCommans\DeleteCommand.cs" />
     <Compile Include="Commands\FilialSectionCommans\UpdateCommand.cs" />
-    <Compile Include="Commands\RentCommand.cs" />
-    <Compile Include="Commands\RentSectionCommand.cs" />
-    <Compile Include="Commands\SellCommand.cs" />
     <Compile Include="Commands\WorkerSectionCommand.cs" />
     <Compile Include="Commands\WorkerSectionCommands\AddCommand.cs" />
     <Compile Include="Commands\WorkerSectionCommands\DeleteCommand.cs" />
     <Compile Include="Commands\WorkerSectionCommands\UpdateCommand.cs" />
-    <Compile Include="Entities\Rent.cs" />
-    <Compile Include="Entities\Sale.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BookViewModel.cs" />
     <Compile Include="ViewModels\ClientViewModel.cs" />
     <Compile Include="ViewModels\FilialViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ViewModels\RentViewModel.cs" />
-    <Compile Include="ViewModels\SaleViewModel.cs" />
     <Compile Include="Views\BooksWindow.xaml.cs">
       <DependentUpon>BooksWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ClientsWindow.xaml.cs">
       <DependentUpon>ClientsWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\RentWindow.xaml.cs">
-      <DependentUpon>RentWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\SellWindow.xaml.cs">
-      <DependentUpon>SellWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WorkersWindow.xaml.cs">
       <DependentUpon>WorkersWindow.xaml</DependentUpon>
@@ -136,14 +123,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\RentWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\SellWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\WorkersWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
