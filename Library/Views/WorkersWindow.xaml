@@ -104,7 +104,7 @@
                 <Grid Grid.Row="1" Margin="65,-20,0,0">
 
                     <Grid.Width>670</Grid.Width>
-                    <Grid.Height>250</Grid.Height>
+                    <Grid.Height>150</Grid.Height>
                     <ListView Name="listViewFilials" ItemsSource="{Binding AllWorkers}" SelectedItem="{Binding SelectedWorker}" Width="670" HorizontalAlignment="Left" Background="{StaticResource FirstColor}">
                         <ListView.View>
                             <GridView>
@@ -159,7 +159,8 @@
 
                         </ListView.View>
                     </ListView>
-
+                    
+                    
                 </Grid>
             </Grid>
         </Canvas>

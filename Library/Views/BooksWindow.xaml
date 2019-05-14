@@ -126,7 +126,7 @@ TextAlignment="Right" FontSize="18"></TextBox>
                 <Grid Grid.Row="1" Margin="65,-20,0,0">
 
                     <Grid.Width>670</Grid.Width>
-                    <Grid.Height>250</Grid.Height>
+                    <Grid.Height>150</Grid.Height>
                     <ListView ItemsSource="{Binding AllBooks}" SelectedItem="{Binding SelectedBook}" Width="670" HorizontalAlignment="Left" Background="{StaticResource FirstColor}">
                         <ListView.View>
                             <GridView>
@@ -190,7 +190,14 @@ TextAlignment="Right" FontSize="18"></TextBox>
 
                         </ListView.View>
                     </ListView>
+                    <StackPanel Orientation="Horizontal" Margin="0,-200,0,0">
+                        <Button Width="150" Height="30" Background="SpringGreen" Content="Sell" Command="{Binding SellCommand}">
 
+                        </Button>
+                        <Button Width="150" Height="30" Background="SpringGreen" Content="Rent" Margin="20,0,0,0" Command="{Binding Rent}">
+
+                        </Button>
+                    </StackPanel>
                 </Grid>
             </Grid>
         </Canvas>
