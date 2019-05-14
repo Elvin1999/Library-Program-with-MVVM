@@ -22,24 +22,29 @@
 
                     <StackPanel Orientation="Horizontal">
                         <StackPanel Orientation="Vertical">
-                            <Label Width="90" Height="30" Content="Name" FontSize="16" 
-                                   Margin="0,40,0,0">
+                            <Label Width="115" Height="35" Content="Name" FontSize="16" 
+                                   Margin="0,20,0,0">
 
                             </Label>
 
-                            <Label Width="90"  Height="35" Content="Address" FontSize="14" Margin="0,40,0,0">
+                            <Label Width="115"  Height="35" Content="Surname" FontSize="14" Margin="0,20,0,0">
 
                             </Label>
+                            <Label Width="115"  Height="35" Content="Phonenumber" FontSize="14" Margin="0,20,0,0">
 
+                            </Label>
+                            <Label Width="115"  Height="35" Content="Connection Datetime" FontSize="8" Margin="0,20,0,0">
+
+                            </Label>
 
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Height="360" Width="160">
-                            <TextBox Text="{Binding CurrentFilial.Name,Mode=TwoWay}" Height="30" Width="140" Margin="0,45,0,0"></TextBox>
-                            <TextBox Text="{Binding CurrentFilial.Address,Mode=TwoWay}" Height="30" Width="140" Margin="0,35,0,0"></TextBox>
-
-
+                            <TextBox Text="{Binding CurrentClient.Name,Mode=TwoWay}" Height="30" Width="140" Margin="0,22,0,0"></TextBox>
+                            <TextBox Text="{Binding CurrentClient.Surname,Mode=TwoWay}" Height="30" Width="140" Margin="0,20,0,0"></TextBox>
+                            <TextBox Text="{Binding CurrentClient.PhoneNumber,Mode=TwoWay}" Height="30" Width="140" Margin="0,25,0,0"></TextBox>
+                            <DatePicker Text="{Binding CurrentClient.ConnectionDT,Mode=TwoWay}" Height="30" Width="140" Margin="0,22,0,0"></DatePicker>  
                         </StackPanel>
-                        <StackPanel Orientation="Vertical" Height="360" Width="160" Margin="160,0,0,0">
+                        <StackPanel Orientation="Vertical" Height="360" Width="160" Margin="120,0,0,0">
                             <Button Width="130" Height="60" Background="White" BorderThickness="0" BorderBrush="AliceBlue" Margin="10,10,0,0"
                                 Command="{Binding AddCommand}"
                                 Content="Add" FontFamily="Comic Sans MS" FontSize="24" Foreground="{StaticResource FirstColor}" Style="{StaticResource NotDefaultButton}"
@@ -90,7 +95,7 @@
 
                     <Grid.Width>670</Grid.Width>
                     <Grid.Height>250</Grid.Height>
-                    <ListView Name="listViewFilials" ItemsSource="{Binding AllFilials}" SelectedItem="{Binding SelectedFilial}" Width="670" HorizontalAlignment="Left" Background="{StaticResource FirstColor}">
+                    <ListView Name="listViewFilials" ItemsSource="{Binding AllClients}" SelectedItem="{Binding SelectedClient}" Width="670" HorizontalAlignment="Left" Background="{StaticResource FirstColor}">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="No" Width="35">
@@ -100,7 +105,7 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Filial Name" Width="120">
+                                <GridViewColumn Header="Name" Width="120">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Padding="5,0" Text="{Binding Name}"></TextBlock>
@@ -110,10 +115,26 @@
 
 
 
-                                <GridViewColumn Header="Address" Width="120">
+                                <GridViewColumn Header="Surname" Width="120">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Padding="5,0" Text="{Binding Address}"></TextBlock>
+                                            <TextBlock Padding="5,0" Text="{Binding Surname}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="PhoneNumber" Width="120">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Padding="5,0" Text="{Binding PhoneNumber}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                
+                                <GridViewColumn Header="Connection DT" Width="120">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Padding="5,0" Text="{Binding ConnectionDT}"></TextBlock>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>

@@ -25,28 +25,33 @@ namespace Library.Commands.BookSectionCommands
 
         public void Execute(object parameter)
         {
-
-            var item = BookViewModel.AllBooks.FirstOrDefault(x => x.Id == BookViewModel.CurrentBook.Id);
-            if (BookViewModel.AllBooks.Count != 0)
+            var curitem = BookViewModel.CurrentBook;
+            if (curitem.Author != null && curitem.Filial != null && curitem.Genre != null &&
+                curitem.Name != null && curitem.PageCount != 0 && curitem.SalePrice != 0)
             {
-                int index = BookViewModel.AllBooks.Count - 1;
-                int newID = BookViewModel.AllBooks[index].Id + 1;
-                BookViewModel.CurrentBook.Id = newID;
-            }
-            if (item == null)
-            {
+                var item = BookViewModel.AllBooks.FirstOrDefault(x => x.Id == BookViewModel.CurrentBook.Id);
+                if (BookViewModel.AllBooks.Count != 0)
+                {
+                    int index = BookViewModel.AllBooks.Count - 1;
+                    int newID = BookViewModel.AllBooks[index].Id + 1;
+                    BookViewModel.CurrentBook.Id = newID;
+                }
+                if (item == null)
+                {
 
-                BookViewModel.AllBooks.Add(BookViewModel.CurrentBook);
+                    BookViewModel.AllBooks.Add(BookViewModel.CurrentBook);
 
-                MessageBoxResult add = MessageBox.Show("Added");
-                BookViewModel.CurrentBook = new Book();
-                BookViewModel.SelectedBook = new Book();
+                    MessageBoxResult add = MessageBox.Show("Added");
+                    BookViewModel.CurrentBook = new Book();
+                    BookViewModel.SelectedBook = new Book();
 
+                }
+                else
+                {
+                    MessageBoxResult add = MessageBox.Show("Can not add this item, you can only update and delete");
+                }
             }
-            else
-            {
-                MessageBoxResult add = MessageBox.Show("Can not add this item, you can only update and delete");
-            }
+
         }
     }
 }

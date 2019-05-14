@@ -22,33 +22,41 @@ namespace Library.Commands.FilialSectionCommans
         {
             return true;
         }
-        
+
         public void Execute(object parameter)
         {
+            var curitem = FilialViewModel.CurrentFilial;
+            if (curitem.Name != null && curitem.Address != null)
+            {
+                
+                if (FilialViewModel.AllFilials.Count == 0)
+                {
+                    FilialViewModel.CurrentFilial.Id = 0;
+                }
+                else if (FilialViewModel.AllFilials.Count != 0)
+                {
+                    int index = FilialViewModel.AllFilials.Count - 1;
+                    int newID = FilialViewModel.AllFilials[index].Id + 1;
+                    FilialViewModel.CurrentFilial.Id = newID;
+                    FilialViewModel.CurrentFilial.No = newID;
+                }
+                var item = FilialViewModel.AllFilials.FirstOrDefault(x => x.Id == FilialViewModel.CurrentFilial.Id);
+                if (item == null)
+                {
 
-            if (FilialViewModel.AllFilials.Count == 0)
-            {
-                FilialViewModel.CurrentFilial.Id = 0;
-            }
-            else if (FilialViewModel.AllFilials.Count != 0)
-            {
-                int index = FilialViewModel.AllFilials.Count - 1;
-                int newID = FilialViewModel.AllFilials[index].Id + 1;
-                FilialViewModel.CurrentFilial.Id = newID;
-                FilialViewModel.CurrentFilial.No = newID;
-            }
-            var item = FilialViewModel.AllFilials.FirstOrDefault(x => x.Id == FilialViewModel.CurrentFilial.Id);
-            if (item == null)
-            {
-
-                FilialViewModel.AllFilials.Add(FilialViewModel.CurrentFilial);
-                MessageBoxResult add = MessageBox.Show("Added");
-                FilialViewModel.CurrentFilial = new Filial();
-                FilialViewModel.SelectedFilial = new Filial();           
+                    FilialViewModel.AllFilials.Add(FilialViewModel.CurrentFilial);
+                    MessageBoxResult add = MessageBox.Show("Added");
+                    FilialViewModel.CurrentFilial = new Filial();
+                    FilialViewModel.SelectedFilial = new Filial();
+                }
+                else
+                {
+                    MessageBoxResult add = MessageBox.Show("Can not add this item, you can only update and delete");
+                }
             }
             else
             {
-                MessageBoxResult add = MessageBox.Show("Can not add this item, you can only update and delete");
+                MessageBoxResult add = MessageBox.Show("Please fill name and address blank");
             }
         }
     }
